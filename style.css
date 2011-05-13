@@ -383,7 +383,7 @@ div.content th img {
   border-radius: 6px 6px 6px 6px;
 }
 .content, .block-wrapper  {
-  border-radius: 6px 6px 6px 6px;
+  /*border-radius: 6px 6px 6px 6px;*/
   color: #333;
 }
 
@@ -485,7 +485,7 @@ div.content > a:link img {
   width:978px;
 }
 #main-wrapper-top {
-  width:977px;
+  width: 100%;
 
 }
 #main-wrapper, {
@@ -496,6 +496,7 @@ div.content > a:link img {
     background-color: #888888;
     border: 10px solid #888888;
     border-radius: 6px 6px 6px; 
+    width: 958px;
 }
 #main-wrapper-in  a,
 #main-wrapper-in a:link,
@@ -509,6 +510,7 @@ div.content > a:link img {
 
 #main-wrapper-border {
   color: #333;
+  padding:10px;
 }
 
 /*******************/
@@ -517,12 +519,14 @@ div.content > a:link img {
 
 #sidebar-first {
   float: left;
+  width: 215px;
 }
 
 #sidebar-last {
-  background: transparent;
-  float: right;
-  margin: 0 0 0 10px;
+    background: none repeat scroll 0 0 transparent;
+    position: absolute;
+    right: 15px;
+    width: 200px;
 }
 
 
@@ -531,7 +535,7 @@ div.content > a:link img {
 /*******************/
 
 #content-wrapper {
-  float: left;
+  /*float: left;*/
 }
 
 #content-top {
@@ -540,7 +544,10 @@ div.content > a:link img {
 }
 
 #content {
-  margin: 0 0 10px;               /* default spacing between content regions */
+  margin: 10px;
+  /*width: 510px;*/
+  float: left;
+  width: 50%;
 }
 
 #content-inner {
@@ -727,7 +734,7 @@ body.layout-first-main #sidebar-first {
 
 body.layout-first-main #content-wrapper {
   margin: 10px;
-  width: 690px;
+  /*width: 690px;*/
 }
 
 
@@ -737,16 +744,15 @@ body.layout-first-main #content-wrapper {
 /**************************/
 
 body.layout-main-last #content-wrapper {
-  margin: 10px;
+  padding: 10px;
   position: relative;
-  width: 930px;
+  /*width: 930px;*/
   z-index: 1;
 }
 
 body.layout-main-last #sidebar-last {
   background-color: transparent;
-  margin: 100px 10px 10px 10px;
-  width: 260px;
+  width: 25%;
   overflow: hidden;
   float: right;
 }
@@ -758,13 +764,14 @@ body.layout-main-last #sidebar-last {
 /**********************************/
 
 body.layout-first-main-last #sidebar-first {
-  margin: 10px;
-  width: 220px;
+  /*margin: 10px;*/
 }
 
 body.layout-first-main-last #content-wrapper {
   margin: 10px;
-  width: 690px;
+  margin: 0 auto;
+  /*width: 75%;*/
+  /*padding: 10px;*/
 }
 
 body.layout-first-main-last #content-wrapper #content-inner {
@@ -772,8 +779,8 @@ body.layout-first-main-last #content-wrapper #content-inner {
 
 body.layout-first-main-last #content-wrapper #sidebar-last {
   /*background-color: #888;*/
-  margin: 10px;
-  width: 280px;
+  /*margin: 10px;*/
+  /*width: 25%;*/
 }
 
 body.full-node.layout-first-main-last #sidebar-last {
@@ -992,7 +999,7 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
 /* rounded blocks styles -= layout-first-main-last & layout-first-main blocks */
 #sidebar-first h2.block-title,
 #sidebar-last h2.block-title{
-  color: #fff;
+  color: #333;
   height:26px;
   padding: 8px 8px 6px 46px;
   text-align: right;
@@ -1004,7 +1011,7 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
 }
 #sidebar-second h2.block-title{
   background:none;
-  color: #000;
+  color: #333;
   height:26px;
   padding: 8px;
   text-align: left;
@@ -1453,17 +1460,16 @@ padding:0;
 /***************/
 #breadcrumb-nav {
   margin:2px auto;
-  width:960px;
   padding-left:15px;
 }
 #breadcrumb {
-  font-size:14px;
+  font-size:9px;
   line-height:100%;
   float:left;
 }
 #breadcrumb a
 { 
-  color:#AFC336;
+  color:#333;
   text-decoration:none;
 }
 #breadcrumb a:hover {
@@ -1738,12 +1744,12 @@ th.active img {
 }
 
 tr.even td {
-  background-color: #E3ECC0;
+  background-color: #6C8CC5;
   border-bottom: 1px solid #CCC;
 }
 
 tr.odd td {
-  background-color: #FDFFEF;
+  background-color: #6C8CA5;
   border-bottom: 1px solid #CCC;
 }
 
@@ -1857,7 +1863,7 @@ div.error {
 
 #comments h2.comments {
   background-color: #94CE18;
-  color: #fff;
+  color: #333;
   font-family: Myriad Pro, Myriad Web Pro Regular, Lucida Grande, Geneva, Trebuchet MS, sans-serif;
   font-size: 1.333em;
   font-weight: 600;
@@ -2429,3 +2435,4 @@ li.views-fluid-grid-item {
 #footer .content, #footer .block-wrapper {
   color: #fff;
 }
+

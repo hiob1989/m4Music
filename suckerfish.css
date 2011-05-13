@@ -199,3 +199,7 @@ http://www.alistapart.com/articles/horizdropdowns
 
 #suckerfishmenu	 ul.menu li li.expanded ul.menu li ul.menu li ul.menu a {   background: #104a91; }
 #suckerfishmenu	 ul.menu li li.expanded ul.menu li ul.menu li ul.menu a:active, #suckerfishmenu ul.menu li li.expanded ul.menu li ul.menu li ul.menu a:hover {   background: #6C8CB5; }
+
+#suckerfishmenu a.active, #suckerfishmenu li.active-trail {
+	background: #6C8CB5;}
+}

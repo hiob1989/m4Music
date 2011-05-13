@@ -1,5 +1,5 @@
 <?php
-// $Id: template.php,v 1.1 2009/07/19 18:14:52 garthee Exp $
+// $Id$
 
 /**
  * Force refresh of theme registry.
@@ -264,12 +264,12 @@ function phptemplate_preprocess_page(&$vars) {
       $_SESSION['colorswitch_displaymodus'] = 1;
     }
     if ($_SESSION['colorswitch_displaymodus'] == 1) {
-      $vars['colorswitch_modus'] = t('Foreground');
+      $vars['colorswitch_modus'] = t('Background');
       $vars['colorswitch_bg'] = theme_get_setting('foreground_bg');
       $vars['colorswitch_border'] = theme_get_setting('foreground_border');
       $vars['colorswitch_font'] = theme_get_setting('foreground_font');
     } else {
-      $vars['colorswitch_modus'] = t('Background');
+      $vars['colorswitch_modus'] = t('Foreground');
       $vars['colorswitch_bg'] = theme_get_setting('background_bg');
       $vars['colorswitch_border'] = theme_get_setting('background_border');
       $vars['colorswitch_font'] = theme_get_setting('background_font');

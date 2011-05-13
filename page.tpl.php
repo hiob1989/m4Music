@@ -31,7 +31,10 @@
       <!-- override style.css -->
       <style type="text/css">
        #main-wrapper-in { background-color: <?php print $colorswitch_border; ?>; border-color: <?php print $colorswitch_border; ?> }
-       #page { background-color: <?php print $colorswitch_bg; ?>; color: <?php print $colorswitch_font; ?> }
+       #main-wrapper-border { border-color: <?php print $colorswitch_border; ?> }
+       #sidebar-last.rounded-block { background-color: <?php print $colorswitch_border; ?>; color: <?php print $colorswitch_bg  ; ?>}
+       html, #page { background-color: <?php print $colorswitch_bg; ?>; color: <?php print $colorswitch_font; ?> }
+       #footer { background-color: <?php print $colorswitch_bg; ?>; color: <?php print $colorswitch_font  ; ?>}
       </style>
     <?php } ?>
     
@@ -120,18 +123,6 @@
 
 
       
-      <div id="breadcrumb-nav" class="clearfix">
-        <div id="breadcrumb">
-          <?php print $breadcrumb; ?>
-        </div>
-        <?php if ($mission): ?>
-        <div id="mission"> 
-          <?php print $mission; ?>
-        </div>
-        <?php endif; ?>
-      </div><!-- /breadcrumb -->
-      
-    
       <div id="main" class="clearfix">      
       <div id="main-wrapper-all">
       <div id="main-wrapper-left">
@@ -140,7 +131,20 @@
           <div id="main-wrapper-in" class="clearfix">
             <div id="main-wrapper-border" class="clearfix rounded-block">        
 
-      
+              <div id="breadcrumb-nav" class="clearfix">
+                <div id="breadcrumb">
+                  <?php print $breadcrumb; ?>
+                </div>
+                <?php if ($mission): ?>
+                <div id="mission"> 
+                  <?php print $mission; ?>
+                </div>
+                <?php endif; ?>
+              </div><!-- /breadcrumb -->
+              
+            
+
+            
           <?php if ($sidebar_first || $sidebar_second): ?>
           <div id="sidebar-first">
             <?php if ($sidebar_second): ?>
@@ -162,9 +166,15 @@
               <?php print $messages; ?>
             <?php endif; ?>
 
-           
-            
-            <div id="content">
+
+            <div id="content-border">
+              <?php if ($sidebar_last): ?>
+                <div id="sidebar-last">
+                  <?php print $sidebar_last; ?>
+                </div><!-- /sidebar_last -->
+              <?php endif; ?>
+
+              <div id="content">
               <?php if ($tabs): ?>
               <div id="content-tabs">
                 <?php print $tabs; ?>
@@ -186,20 +196,14 @@
                 </div>
               </div><!-- /content-inner -->
             </div><!-- /content -->
+          </div><!-- /content-border -->
 
-              <?php if ($sidebar_last): ?>
-                <div id="sidebar-last">
-                  <?php print $sidebar_last; ?>
-                </div><!-- /sidebar_last -->
-              <?php endif; ?>
-
-            
             <?php if ($content_bottom): ?>
             <div id="content-bottom">
               <?php print $content_bottom; ?>
             </div><!-- /content-bottom -->
-            <?php endif; ?>
-          </div><!-- /content-wrapper -->
+            <?php endif; ?>            
+            </div><!-- /content-wrapper -->
           
 
         </div>
