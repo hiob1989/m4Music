@@ -256,8 +256,12 @@ function phptemplate_preprocess_page(&$vars) {
     // 1: foreground
     // 0: switch
     // -1: background
-    if ($_GET['switch'] == 0) {
+    if ($_GET['switch'] == 'color') {
       $_SESSION['colorswitch_displaymodus'] = $_SESSION['colorswitch_displaymodus']*-1;
+    } else if ($_GET['switch'] == 'bg') {
+      $_SESSION['colorswitch_displaymodus'] = -1;
+    } else if ($_GET['switch'] == 'fg') {
+      $_SESSION['colorswitch_displaymodus'] = 1;
     }
     if ($_SESSION['colorswitch_displaymodus'] == 1) {
       $vars['colorswitch_modus'] = t('Foreground');
@@ -270,7 +274,7 @@ function phptemplate_preprocess_page(&$vars) {
       $vars['colorswitch_border'] = theme_get_setting('background_border');
       $vars['colorswitch_font'] = theme_get_setting('background_font');
     }
-    $vars['colorswitch_text'] = '<a href="&switch=0" title="' . $vars['colorswitch_modus'] . '">' . $vars['colorswitch_modus'] . '</a>';;
+    $vars['colorswitch_text'] = '<a href="&switch=color" title="' . $vars['colorswitch_modus'] . '">' . $vars['colorswitch_modus'] . '</a>';;
     $vars['colorswitch'] = $_SESSION['colorswitch_displaymodus'];
   }
   

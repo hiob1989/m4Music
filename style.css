@@ -113,7 +113,7 @@ html {
 #page a,
 #page a:link,
 a:visited {
-  color: #FFF;
+  /*color: #FFF;*/
 }  
 
 p {
@@ -151,7 +151,6 @@ ul li,
 ul.menu li,
 .item-list ul li,
 li.leaf {
-  //background: transparent url('images/raquo.png') no-repeat left 0.833em;
   list-style-image: none;
   list-style-type: none;
   padding: 0.2em 0 0 1.333em;
@@ -161,7 +160,6 @@ li.leaf {
 #sidebar-first ul.menu li,
 #sidebar-first .item-list ul li,
 #sidebar-first li.leaf {
-  // background: transparent url('images/green-bullet.png') no-repeat left 0.333em;
   list-style-image: none;
   list-style-type: none;
   /*padding: 0 0 0 1.666em;*/
@@ -198,7 +196,6 @@ html.js #user-login li.openid-processed {
 }
 
 #preface-wrapper div.block ul li {
-  //background: transparent url('images/green-checkmark.png') no-repeat 0 0.222em;
   list-style-image: none;
   list-style-type: none;
   padding: 1em 0 0 2.222em;
@@ -214,7 +211,6 @@ body.layout-main-last #sidebar-last ul.menu li,
 body.layout-main-last #sidebar-last .item-list ul li,
 #content-content ul li,
 #content-bottom ul li {
-  //background: transparent url('images/green-bullet.png') no-repeat left 0.333em;
   list-style-image: none;
   list-style-type: none;
   /*padding: 0 0 0 1.666em;*/
@@ -245,7 +241,6 @@ div.content th img {
 }
 
 #block-views-tweets-block {
-  background: transparent url(icons/twitter1.png) no-repeat scroll 0px -5px;
 }
 #block-views-tweets-block  h2{
   padding:15px 0 0 65px;
@@ -272,7 +267,6 @@ div.content th img {
 }
 
 #search-box {
-  //background: transparent url(images/rb_br01.gif) repeat right top;
   border: 0px solid #CCCCCC;
   float: right;
   padding: 8px;
@@ -287,7 +281,6 @@ div.content th img {
 }
 #login-box {
   height:25px;
-  //background: transparent url(images/rb_br01.gif) repeat right top;
   border: 0px solid #CCCCCC;
   float: right;
   padding: 8px;
@@ -486,21 +479,18 @@ div.content > a:link img {
 
 }
 #main-wrapper-left {
-  //background:transparent url(images/bg_mainColumn.gif) repeat-y scroll left top;
   margin:0 auto;
   position:relative;
   text-align:left;
   width:978px;
 }
 #main-wrapper-top {
-  //background:transparent url(images/bg_middle_top.gif) no-repeat scroll left top;
   width:977px;
 
 }
 #main-wrapper, {
  padding:11px 13px 26px;
   width:951px;
-  background: transparent url(images/bg_middle_bottom.gif) no-repeat scroll left bottom;
 }
 #main-wrapper-in {
     background-color: #888888;
@@ -634,7 +624,7 @@ div.content > a:link img {
   width: 80px;
   height: 30px;
   float: right;
-  //background: transparent url('images/blue-button.png') no-repeat left center;
+  background: transparent url('images/blue-button.png') no-repeat left center;
   -moz-border-radius: 4px;
   -moz-outline-radius: 4px;
   -webkit-border-radius: 4px;
@@ -662,7 +652,7 @@ div.content > a:link img {
 #login-box a,
 #footer a,
 #footer-topx a{
-  color:#FFF;
+  /*color:#FFF;*/
   text-decoration:none;
 }
 #login-box a:hover,
@@ -1002,7 +992,6 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
 /* rounded blocks styles -= layout-first-main-last & layout-first-main blocks */
 #sidebar-first h2.block-title,
 #sidebar-last h2.block-title{
-  //background:transparent url(images/bg_boxheader2.gif) no-repeat scroll left top;
   color: #fff;
   height:26px;
   padding: 8px 8px 6px 46px;
@@ -1031,7 +1020,6 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
 
 #sidebar-first div.block div.content,
 {
-  //background:transparent url(images/bg_shopping_cart_totals.gif) repeat scroll left top;
   border-bottom: 0px solid #F1F5F7;
   color:#666;
   padding: 10px 10px 8px;
@@ -1132,7 +1120,7 @@ body.layout-main-last #sidebar-last h2.block-title {
   width:140px;
 }
 #sidebar-second div.block ul.menu li:hover{
-  /*background: #B0C436 url(images/h_separator02.gif) repeat-x  bottom left;*/
+  background: #B0C436 url(images/h_separator02.gif) repeat-x  bottom left;
 }
 
 #sidebar-second div.block ul.menu li a:hover{
@@ -1191,7 +1179,6 @@ div.rounded-block-top-left,
 div.rounded-block-top-right, 
 div.rounded-block-bottom-left, 
 div.rounded-block-bottom-right { 
-  background: transparent url('images/rounded-block.png') no-repeat;                         /* combined rounded corner image */
   font-size: 2px;                                 /* IE div correction */
   height: 11px;                                   /* height of an image corner */
 }
@@ -1235,7 +1222,6 @@ div.rounded-block-bottom-right {
 
 div.rounded-outside,
 div.rounded-inside {
-  background: transparent url('images/rounded-block-inner.png') repeat-y right;
   padding-right: 8px;
 }
 
@@ -1345,7 +1331,6 @@ padding:0;
 /************************************/
 
 #primary-menu ul.menu li {                        /* top item layout */
-  background: transparent url('images/tab-left.png') no-repeat left 0;
   display: block;
   float: left;
   margin: 0 4px 0 0;
@@ -1361,7 +1346,6 @@ padding:0;
 }
 
 #primary-menu ul.menu li a {
-  /*background: transparent url('images/tab-right.png') no-repeat right 0;*/
   color: #154B70;
   display: block;
   padding: 0.416em 0.833em 0.083em 0;    /* 5px 10px 1px 0 */
@@ -1377,7 +1361,6 @@ padding:0;
 }
 
 #primary-menu ul.menu li ul {
-  //background: transparent url('images/drop-bottom.png') no-repeat 0 bottom;
   left: -999em;
   opacity: 0.95;
   margin: 0 0 0 -10px;
