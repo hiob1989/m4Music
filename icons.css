@@ -1,0 +1,33 @@
+/**
+ * $Id$
+ * icons for blocks 
+ */
+
+/* block-icon */
+div.block-icon {
+  height: 48px;
+  left: 0;
+  position: absolute;
+  top: -0.666em;
+  width: 48px;
+}
+
+/**
+ * HOW TO ADD ICONS TO BLOCKS
+ *
+ * Below is an example of adding an icon to a custom block.
+ * To add an icon to your custom block follow these steps:
+ * 1. Place your 48x48 icon into the icons folder that came with the theme
+ * 2. Copy & paste the example below into the theme's local.css file
+ * 3. Find your block's id & delta (e.g., block-block-1) - use Firebug!
+ * 4. Replace the block id & delta with the id & delta of the custom block you want to add an icon to
+ * 5. Add the name of your icon file to the block's background url (e.g., url('icons/name-of-icon.png'))
+ * 
+ * NOTE: When upgrading to a newer version of this theme, changes made to this file will be overwritten.
+ * You should put your custom block & icon styles in local.css (see: the local_sample.css file for more details).
+
+#block-block-1 div.block-icon {
+  background: transparent url('icons/name-of-icon.png') no-repeat left center;
+}
+
+*/
