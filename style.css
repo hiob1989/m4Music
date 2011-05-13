@@ -329,6 +329,7 @@ div.content th img {
   font-family: Myriad Pro, Myriad Web Pro Regular, Lucida Grande, Geneva, Trebuchet MS, sans-serif;
   margin: 2px;
   width: 380px;
+  height: 70px;
 }
 
 #header-first #logo {                            /* logo postion.  default image replaced if you upload your own */
@@ -384,7 +385,7 @@ div.content th img {
 }
 .content, .block-wrapper  {
   /*border-radius: 6px 6px 6px 6px;*/
-  color: #333;
+  /*color: #333;*/
 }
 
 .rounded-block {
@@ -692,9 +693,11 @@ div.content > a:link img {
   color: #DDD;
   display: block;
   font-size: 0.9em;
-  padding: 10px 0;
+  padding: 0;
+  padding-right: 10px;
+  
   text-align: right;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 #legal-notice a {
@@ -921,7 +924,7 @@ blockquote {
 
 div.node.full-node div.content {
   border-bottom: 1px solid #D6DDB9;
-  min-height: 230px;
+  min-height: 150px;
 }
 
 .node-form .standard {
@@ -975,6 +978,10 @@ div.block div.content {
   overflow: hidden;
 }
 
+#sidebar-last div.block div.content {
+  padding: 10px;
+}
+
 #user-login-form .item-list ul li,
 div.terms ul li {
   list-style-type: none;
@@ -1001,7 +1008,7 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
 #sidebar-last h2.block-title{
   color: #333;
   height:26px;
-  padding: 8px 8px 6px 46px;
+  padding: 0 8px 0 1px;
   text-align: right;
   text-shadow: #545454 1px 1px; 
   //-moz-border-radius-topleft: 3px;
@@ -1013,7 +1020,7 @@ body.layout-first-main-last #sidebar-last .block-wrapper {
   background:none;
   color: #333;
   height:26px;
-  padding: 8px;
+  padding: 2px;
   text-align: left;
   text-shadow: #545454 1px 1px;
 }
@@ -2433,6 +2440,6 @@ li.views-fluid-grid-item {
 }
 
 #footer .content, #footer .block-wrapper {
-  color: #fff;
+  /*color: #fff;*/
 }
 
