@@ -17,7 +17,7 @@ $file_types = array(
 $cached = 0;
 $origin = '';
 if (module_exists('imagecache')) {
-  $directory = file_directory_path() .'/banners';
+  $directory = base_path().'/'.file_directory_path() .'/banners/';
   $origin = $directory;
   file_check_directory($directory, FILE_CREATE_DIRECTORY);
   $presetname = 'm4music_banner_image';
@@ -31,7 +31,9 @@ if (module_exists('imagecache')) {
   if (!$cached) {
     $directory = opendir("./banners/");
     $origin = "./banners/";
-  }  
+  }  else {
+    $directory = opendir($origin);
+  }
 } else {
   $directory = opendir("./banners/");
   $origin = "./banners/";
@@ -54,7 +56,7 @@ if ( !empty( $files ) ) {
     $src = $files[$which];
     $dst = m4music_imagecache_generate($presetname, $src);
     if (file_exists($dst)) {
-      #$files[$which] = $dst;
+      $files[$which] = $dst;
     }
   }
   #echo $files[$which];
