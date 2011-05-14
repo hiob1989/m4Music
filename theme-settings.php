@@ -12,7 +12,8 @@
 function phptemplate_settings($saved_settings) {
   // Get the node types
   $node_types = node_get_types('names');
- 
+
+  
   /**
    * The default values for the theme variables. Make sure $defaults exactly
    * matches the $defaults in the template.php file.
@@ -20,6 +21,7 @@ function phptemplate_settings($saved_settings) {
   $defaults = array(
     'user_notverified_display'              => 1,
     'breadcrumb_display'                    => 0,
+    'banner_display'                        => 0,
     'iepngfix_display'                      => 0,
     'colorswitch_display'                   => 0,
     'suckerfish_display'                    => 0,
@@ -180,6 +182,26 @@ function phptemplate_settings($saved_settings) {
                           'all' => t('Display mission statement on all pages'),
                         ),
   );
+
+  // ImageCache Settings
+  if (module_exists('imagecache')) {
+    m4music_add_imagecache_preset();
+    // Banner Images with imagecache
+    $form['tnt_container']['general_settings']['banner'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Banner Images'),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+    );
+    $form['tnt_container']['general_settings']['banner']['banner_display'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Display Banner with imagecache'),
+      '#default_value' => $settings['banner_display'],
+    );
+  }
+
+
+
   
   // Breadcrumb
   $form['tnt_container']['general_settings']['breadcrumb'] = array(
@@ -839,4 +861,28 @@ function phptemplate_settings($saved_settings) {
   return $form;
 }  
 
+
+
+function m4music_add_imagecache_preset() {
+
+  $presets = imagecache_presets();
+  $addpreset = 1;
+  foreach ($presets as $k => $imgpreset) {
+    if ($imgpreset['presetname'] == 'm4music_banner_image') {
+      $addpreset = 0;
+    }
+  }
+  if ($addpreset) {
+    //install ImageCache presets
+    $imagecache_presets = array(array('presetname' => 'm4music_banner_image',));
+    $imagecache_actions = array('m4music_banner_image' => array('action' => 'imagecache_scale','data' => array('width' => 960,'height' => 70,'upscale' => 1,),'weight' => 0,),);
+    
+    foreach ($imagecache_presets as $preset) {
+      $preset = imagecache_preset_save($preset);
+      $imagecache_actions[$preset['presetname']]['presetid'] = $preset['presetid'];
+      imagecache_action_save($imagecache_actions[$preset['presetname']]);
+      drupal_set_message(t('ImageCache preset %id: %name and corresponding actions saved.', array('%id' => $preset['presetid'], '%name' => $preset['presetname'])));
+    }
+  }
+}
 ?>

@@ -27,6 +27,14 @@
     <![endif]-->
     <?php } ?>
 
+    <?php if (theme_get_setting('banner_display')) { ?>
+      <!-- override style.css -->
+      <style type="text/css">
+        #header-middle {background: <?php print $colorswitch_bg; ?> url(<?php print $base_path . $directory; ?>/banner-img.php) no-repeat 0px 0px;
+      </style>
+    <?php } ?>
+
+    
     <?php if (theme_get_setting('colorswitch_display')) { ?>
       <!-- override style.css -->
       <style type="text/css">
